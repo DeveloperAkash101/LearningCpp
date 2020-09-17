@@ -9,7 +9,7 @@
                 "_DEBUG",
                 "UNICODE",
                 "_UNICODE"
-            ],
+            ], 
             "windowsSdkVersion": "10.0.15063.0",
             "compilerPath": "E:/SoftwareInstalledNew/MingW64_Installed/mingw64/bin/g++.exe",
             "cStandard": "c11",

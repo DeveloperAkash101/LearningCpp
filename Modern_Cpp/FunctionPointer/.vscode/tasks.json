@@ -2,7 +2,7 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "type": "shell",
+            "type": "shell", 
             "label": "C/C++: g++.exe build active file",
             "command": "E:\\SoftwareInstalledNew\\MingW64_Installed\\mingw64\\bin\\g++.exe",
             "args": [
