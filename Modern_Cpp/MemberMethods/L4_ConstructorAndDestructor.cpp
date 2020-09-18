@@ -19,14 +19,14 @@ public:
     {
         objectName = inputName;
         data = 10;
-        std::cout << "\nSingle argument constructor called for " << objectName;
+        std::cout << "\nSingle argument constructor called for " << objectName<<" With Data="<<data;
     }
     
     SimpleBaseClass(std::string inputName, int inputData)
     {
         objectName = inputName;
         data = inputData;
-        std::cout << "\nDouble argument constructor called for " << objectName;
+        std::cout << "\nDouble argument constructor called for " << objectName<<"With Data ="<<data;
     }
     
     ~SimpleBaseClass()
@@ -51,7 +51,8 @@ int main()
     }
 
     {
-        SimpleBaseClass sbcNamedObjWithData("NamedObjectWithData", 15);
+        SimpleBaseClass sbcNamedObjWithData1("NamedObjectWithData1", 15);
+		SimpleBaseClass sbcNamedObjWithData2{"NamedObjectWithData2", 20};
     }
     SimpleBaseClass *sbcNamedObj4 = new SimpleBaseClass("NamedObjectThroughPointer");
     SimpleBaseClass *sbcNamedObjWithDataThroughPointer = new SimpleBaseClass("sbcNamedObjWithDataThroughPointer", 20);
@@ -81,11 +82,13 @@ Destructor called for NamedObject_3_WithoutData
 Destructor called for NamedObject_2_WithoutData
 Destructor called for NamedObject_1_WithoutData
 
-Double argument constructor called for NamedObjectWithData
-Destructor called for NamedObjectWithData
+Double argument constructor called for NamedObjectWithData1With Data =15
+Double argument constructor called for NamedObjectWithData2With Data =20
+Destructor called for NamedObjectWithData2
+Destructor called for NamedObjectWithData1
 
 Single argument constructor called for NamedObjectThroughPointer
-Double argument constructor called for sbcNamedObjWithDataThroughPointer
+Double argument constructor called for sbcNamedObjWithDataThroughPointerWith Data =20
 Destructor called for NamedObjectThroughPointer
 Destructor called for sbcNamedObjWithDataThroughPointer
 */
