@@ -14,25 +14,24 @@ public:
         data = 5;
         std::cout << "\nNo argument constructor called for " << objectName;
     }
-    
+
     SimpleBaseClass(std::string inputName)
     {
         objectName = inputName;
         data = 10;
-        std::cout << "\nSingle argument constructor called for " << objectName<<" With Data="<<data;
+        std::cout << "\nSingle argument constructor called for " << objectName << " With Data=" << data;
     }
-    
+
     SimpleBaseClass(std::string inputName, int inputData)
     {
         objectName = inputName;
         data = inputData;
-        std::cout << "\nDouble argument constructor called for " << objectName<<"With Data ="<<data;
+        std::cout << "\nDouble argument constructor called for " << objectName << "With Data =" << data;
     }
-    
+
     ~SimpleBaseClass()
     {
         std::cout << "\nDestructor called for " << objectName;
-
     }
 };
 
@@ -52,7 +51,7 @@ int main()
 
     {
         SimpleBaseClass sbcNamedObjWithData1("NamedObjectWithData1", 15);
-		SimpleBaseClass sbcNamedObjWithData2{"NamedObjectWithData2", 20};
+        SimpleBaseClass sbcNamedObjWithData2{"NamedObjectWithData2", 20};
     }
     SimpleBaseClass *sbcNamedObj4 = new SimpleBaseClass("NamedObjectThroughPointer");
     SimpleBaseClass *sbcNamedObjWithDataThroughPointer = new SimpleBaseClass("sbcNamedObjWithDataThroughPointer", 20);
@@ -64,7 +63,6 @@ int main()
     */
     delete sbcNamedObj4;
     delete sbcNamedObjWithDataThroughPointer;
-
 
     return 0;
 }
